@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
@@ -32,6 +33,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
     public void onNavigationDrawerItemSelected(int position) { 	
 //    	Toast.makeText(getApplicationContext(), String.valueOf(position), Toast.LENGTH_SHORT).show();
     	if (listFragment == null) {
+//        	Toast.makeText(getApplicationContext(), "Fragment Manager NULL", Toast.LENGTH_SHORT).show();
     		fragManager = getFragmentManager();
             
             listFragment = new ArrayList<Fragment>();
