@@ -25,7 +25,7 @@ public class FragmentTwo extends Fragment implements SurfaceHolder.Callback {
 	private SurfaceHolder vidHolder;
 	private SurfaceView vidSurface;
 	private final String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
-	
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -57,14 +57,16 @@ public class FragmentTwo extends Fragment implements SurfaceHolder.Callback {
 	@Override
 	public void surfaceCreated(SurfaceHolder arg0) {
 		// TODO Auto-generated method stub
-		new Loading().execute();
+		if (mediaPlayer == null) {
+			new Loading().execute();
+		}
 		
 	}
 
 	@Override
 	public void surfaceDestroyed(SurfaceHolder arg0) {
 		// TODO Auto-generated method stub
-		
+		Toast.makeText(getActivity(), "surface destroy", Toast.LENGTH_SHORT).show();
 	}
 	
 	private class Loading extends AsyncTask<Void, Void, Void> implements OnPreparedListener {
