@@ -48,7 +48,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
             	fragManager.beginTransaction().detach(fragment).commit();
     		}
             
-            fragManager.beginTransaction().attach(listFragment.get(0)).commit();
+            fragManager.beginTransaction().attach(listFragment.get(position)).commit();
     	} else {
         	for (Fragment fragment : listFragment) {
     			if (fragment == listFragment.get(position)) {
