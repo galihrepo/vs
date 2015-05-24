@@ -19,6 +19,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
     private FragmentOne frag1;
     private FragmentTwo frag2;
     private FragmentThree frag3;
+    private FragmentFour frag4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +41,12 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
             frag1 = new FragmentOne();
             frag2 = new FragmentTwo();
             frag3 = new FragmentThree();
+            frag4 = new FragmentFour();
             
             listFragment.add(frag1);
             listFragment.add(frag2);
             listFragment.add(frag3);
+            listFragment.add(frag4);
             
             for (Fragment fragment : listFragment) {
             	fragManager.beginTransaction().add(R.id.container, fragment).commit();

@@ -17,19 +17,19 @@ public class FragmentOne extends Fragment {
 		// TODO Auto-generated method stub
 		View view = inflater.inflate(R.layout.fragment_one, container, false);
 		
-		String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
-		Uri vidUri = Uri.parse(vidAddress);
+//		String vidAddress = Url.VIDEO_STORAGE;
+//		Uri vidUri = Uri.parse(vidAddress);
+//		
+//		MediaController vidControl = new MediaController(getActivity());
+//		
+//		VideoView vidView = (VideoView) view.findViewById(R.id.videoView1);
+//		vidView.setVideoURI(vidUri);
+//		vidView.start();
+//		
+//		vidControl.setAnchorView(vidView);
+//		vidView.setMediaController(vidControl);
 		
-		MediaController vidControl = new MediaController(getActivity());
-		
-		VideoView vidView = (VideoView) view.findViewById(R.id.videoView1);
-		vidView.setVideoURI(vidUri);
-		vidView.start();
-		
-		vidControl.setAnchorView(vidView);
-		vidView.setMediaController(vidControl);
-		
-		Toast.makeText(getActivity(), "onCreateView ONE", Toast.LENGTH_SHORT).show();
+//		Toast.makeText(getActivity(), "onCreateView ONE", Toast.LENGTH_SHORT).show();
 		
 		return view;
 	}
