@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class MainActivity extends Activity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
@@ -20,6 +19,7 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
     private FragmentTwo frag2;
     private FragmentThree frag3;
     private FragmentFour frag4;
+    private FragmentFive frag5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +42,13 @@ public class MainActivity extends Activity implements NavigationDrawerFragment.N
             frag2 = new FragmentTwo();
             frag3 = new FragmentThree();
             frag4 = new FragmentFour();
+            frag5 = new FragmentFive();
             
             listFragment.add(frag1);
             listFragment.add(frag2);
             listFragment.add(frag3);
             listFragment.add(frag4);
+            listFragment.add(frag5);
             
             for (Fragment fragment : listFragment) {
             	fragManager.beginTransaction().add(R.id.container, fragment).commit();

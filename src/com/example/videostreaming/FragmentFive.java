@@ -14,7 +14,7 @@ import android.widget.Toast;
 import android.widget.VideoView;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
-public class FragmentFour extends Fragment implements OnClickListener, OnSeekBarChangeListener {
+public class FragmentFive extends Fragment implements OnClickListener, OnSeekBarChangeListener {
 	
 	private final long UPDATE_SEEKBAR = 1; 
 	private int duration;
@@ -33,7 +33,7 @@ public class FragmentFour extends Fragment implements OnClickListener, OnSeekBar
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View view = inflater.inflate(R.layout.fragment_four, container, false);
+		View view = inflater.inflate(R.layout.fragment_five, container, false);
 		
 		seekbar = (SeekBar) view.findViewById(R.id.seekBar1);
 		vidView = (VideoView) view.findViewById(R.id.videoView1);

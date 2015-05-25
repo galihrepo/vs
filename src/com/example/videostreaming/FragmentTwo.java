@@ -146,10 +146,9 @@ public class FragmentTwo extends Fragment implements SurfaceHolder.Callback, OnC
 			// TODO Auto-generated method stub
 			try {
 			    mediaPlayer = new MediaPlayer();
-//				mediaPlayer = MediaPlayer.create(getActivity(), Uri.parse(Url.VIDEO_STORAGE));
 			    mediaPlayer.setDisplay(vidHolder);
-			    mediaPlayer.setDataSource(getActivity(), Uri.parse(Url.VIDEO_STORAGE));
-			    mediaPlayer.prepare();
+			    mediaPlayer.setDataSource(Url.VIDEO_ONLINE);
+			    mediaPlayer.prepareAsync();
 			    mediaPlayer.setOnPreparedListener(this);
 			    mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 			} 
@@ -163,7 +162,7 @@ public class FragmentTwo extends Fragment implements SurfaceHolder.Callback, OnC
 		@Override
 		public void onPrepared(MediaPlayer arg0) {
 			// TODO Auto-generated method stub
-//			mediaPlayer.start();
+			mediaPlayer.start();
 		}
 	}
 
@@ -171,18 +170,18 @@ public class FragmentTwo extends Fragment implements SurfaceHolder.Callback, OnC
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		int id = v.getId();
-		if (id == btnPlay.getId()) {
-			mediaPlayer.start();
-		} else if (id == btnPause.getId()) {
-			mediaPlayer.pause();
-			position = mediaPlayer.getCurrentPosition();
-		} else if (id == btnResume.getId()) {
-			mediaPlayer.seekTo(position);
-			mediaPlayer.start();
-		} else if (id == btnReset.getId()) {
+//		if (id == btnPlay.getId()) {
+//			mediaPlayer.start();
+//		} else if (id == btnPause.getId()) {
 //			mediaPlayer.pause();
-//			position = 0;
-			mediaPlayer.reset();
-		}
+//			position = mediaPlayer.getCurrentPosition();
+//		} else if (id == btnResume.getId()) {
+//			mediaPlayer.seekTo(position);
+//			mediaPlayer.start();
+//		} else if (id == btnReset.getId()) {
+////			mediaPlayer.pause();
+////			position = 0;
+//			mediaPlayer.reset();
+//		}
 	}
 }
